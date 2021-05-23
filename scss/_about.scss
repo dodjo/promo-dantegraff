@@ -1,0 +1,86 @@
+.about {
+    position: relative;
+    width: 100%;
+    height: 1227px;
+    border-bottom: 4px solid #01AEE7;
+    margin-bottom: 75px;
+    background: url("../img/about-bg.jpg") center top no-repeat, url("../img/about-bg-light.png") right 50% no-repeat;
+    background-size: cover;
+
+    // &__bg1 {
+    //   position: absolute;
+    //   background: #00C3FF url("../img/about-bg1.jpg") 100% 100% no-repeat;
+    //   width: 100%;
+    //   height: 741px;
+    //   z-index: -1;
+    //   clip-path : polygon(0 0, 100% 0% , 100% 50%, 0% calc(100% - 2vw));
+    // }
+
+    // &__bg2 {
+    //   position: absolute;
+    //   background: $black-color;
+    //   bottom: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: -2;
+    // }
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    //   height: 62%;
+    //   width: 100%;
+    //   background: $black-color url("../img/about-bg2.jpg") center bottom repeat-x;
+    //   clip-path: polygon(0% 40%, 100% calc(0% + 2vw), 100% 100%, 0% 100%);
+    //   z-index: -1;
+    // }
+
+    // .container {
+    //   max-width: 1280px;
+    //   margin: 0 auto;
+    //   display: flex;
+    //   justify-content: space-between;
+    //   padding: 35px 20px;
+    //   z-index: 2;
+    // }
+
+    &__description {
+        position: absolute;
+        top: 35px;
+        right: 35vw;
+        width: 50vw;
+        height: 502px;
+        background: url("../img/about-description.png") no-repeat center center;
+        background-size: contain;
+    }
+
+    &__phone {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 882px;
+        height: 786px;
+        background: url("../img/about-phone.png") no-repeat top right;
+        background-size: contain;
+    }
+
+    &__button-join {
+        position: relative;
+        background: linear-gradient(180.21deg, rgba(0, 194, 235, 0.7) 0.15%, rgba(0, 141, 224, 0.8) 124.18%), url('../img/about-bg1.jpg') center center no-repeat;
+        box-shadow: 0px 10px 20px rgba(0, 194, 235, 0.3);
+        border-radius: 20px;
+        padding: 30px 85px;
+
+        font-style: italic;
+        font-weight: 700;
+        font-size: 2.14em;
+        text-transform: uppercase;
+        text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.25);
+        color: $white-color;
+        border-top: solid 1px rgba(255, 255, 255, 0.5);
+        border-bottom: solid 1px rgba(46, 70, 174, 0.25);
+    }
+}

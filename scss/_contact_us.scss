@@ -1,0 +1,121 @@
+.contact_us {
+  text-align: center;
+  padding: r(55) 0 r(77) 0;
+  background: url('../img/contact_us-bg.jpg') top left repeat-x;
+
+  @media (max-width: $md) {
+    padding: r(40) 0;
+  }
+
+  .contact_wrap {
+    max-width: r(750);
+    margin: 0 auto;
+    padding: 0 r(90);
+
+    @media (max-width: $md) {
+      padding: 0 r(40);
+    }
+  }
+
+
+  &__title {
+    font-style: italic;
+    font-weight: 800;
+    font-size: r(38);
+    line-height: r(38);
+    text-transform: uppercase;
+    color: $black-color;
+  }
+
+  &__text {
+    margin-top: r(22);
+    font-size: r(18);
+    line-height: r(22);
+  }
+
+  .form {
+    margin-top: r(50);
+
+    @media (max-width: $md) {
+      margin-top: r(40);
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 r(-10);
+    }
+
+    &__col {
+      display: flex;
+      padding: 0 r(10);
+      flex: 1 1;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media (max-width: $md) {
+        flex: 1 1 100%;
+      }
+    }
+
+    &__control {
+      @media (max-width: $md) {
+        margin-bottom: r(10);
+        font-size: r(16);
+        line-height: r(20);
+      }
+    }
+
+    &__btn {
+      max-width: r(340);
+      margin: 0 auto;
+      margin-top: r(28);
+
+      @media (max-width: $md) {
+        max-width: 100%;
+        font-size: r(20);
+        line-height: r(24);
+      }
+    }
+
+  }
+
+  &__other {
+    margin-top: r(50);
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    span {
+      display: inline-block;
+      padding: 0 r(10);
+      position: relative;
+      top: 7px;
+      font-weight: 500;
+      font-size: r(14);
+      line-height: r(17);
+      color: #BDBEBF;
+      background: $white-color;
+      @media (max-width: $md) {
+        font-size: r(16);
+        line-height: r(20);
+      }
+    }
+
+  }
+
+  .social {
+    @media (max-width: $sd) {
+      background: transparent;
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  .contact_us {
+    &__social {
+      background: none;
+    }
+  }
+}

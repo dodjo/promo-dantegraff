@@ -1,0 +1,82 @@
+.participate {
+  width: 100%;
+  padding: r(35) 0;
+  background: url('../img/participate-bg.jpg') center center no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  &__title {
+    font-style: italic;
+    font-weight: 800;
+    font-size: r(38);
+    line-height: r(38);
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.5);
+    color: $white-color;
+
+    @media (max-width: $md) {
+      font-size: r(35);
+    }
+  }
+
+  &__text {
+    margin-top: r(26);
+    font-weight: 400;
+    font-size: r(18);
+    line-height: r(22);
+    color: $white-color;
+
+    @media (max-width: $md) {
+      font-size: r(16);
+      line-height: r(19);
+    }
+  }
+
+  &__links {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: r(26);
+    max-width: r(400);
+    @media (max-width: $sd) {
+      max-width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+    height: r(50);
+    margin: r(10);
+    flex: 1 1 40%;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+
+    &--google {
+      background: url('../img/icon-google-active.png') center center no-repeat;
+      background-size: contain;
+      filter: grayscale(100%);
+      &:hover {
+        // background: url('../img/icon-google-active.png') center center no-repeat;
+        background-size: contain;
+        transform: scale(1.2);
+        filter: grayscale(0);
+      }
+    }
+    &--apple {
+      background: url('../img/icon-apple-active.png') center center no-repeat;
+      background-size: contain;
+      filter: grayscale(100%);
+      &:hover {
+        // background: url('../img/icon-apple-active.png') center center no-repeat;
+        background-size: contain;
+        transform: scale(1.2);
+        filter: grayscale(0);
+      }
+    }
+  }
+
+}
+

@@ -1,0 +1,133 @@
+.why-us {
+  width: 100%;
+  padding: r(22) 0 r(84) 0;
+  background: url('../img/why_us-bg-line1.svg') left r(110) no-repeat, url('../img/why_us-bg-line2.svg') right 95% no-repeat, $white-color;
+  background-size: 45%;
+
+  @media (max-width: $md) {
+    background-position: left r(60), right 95%;
+    background-size: r(400), r(300);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    flex: 1;
+
+    @media (max-width: $md) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__title-text {
+    padding-top: r(60);
+    padding-left: r(20);
+    flex: 1;
+
+    @media (max-width: $md) {
+      padding-top: r(80);
+      padding-left: r(100);
+    }
+  }
+
+  &__cards {
+    margin-top: r(100);
+    display: flex;
+    @media (max-width: $md) {
+      margin-top: r(65);
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    // padding-top: r(225);
+    flex: 0 1 33%;
+    margin: 0 r(20);
+
+    @media (max-width: $md) {
+      display: flex;
+      flex: 0 1 100%;
+      margin: r(20) 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: r(200);
+      height: r(175);
+      margin-bottom: r(45);
+    }
+
+    &--web::before {
+      background: url('../img/why_us-ico_web.png') center center no-repeat;
+      background-size: contain;
+      margin-top: r(130);
+      @media (max-width: $md) {
+        margin-top: 0;
+        margin-left: r(10);
+        order: 1;
+        width: 100%;
+        height: r(120);
+        margin-bottom: 0;
+        flex: 1 0 33%;
+      }
+    }
+
+    &--mobil::before {
+      background: url('../img/why_us-ico_mobil.png') center center no-repeat;
+      background-size: contain;
+      margin-top: r(60);
+      @media (max-width: $md) {
+        background-position: left center;
+        margin-top: 0;
+        margin-right: r(10);
+        width: 70%;
+        height: r(130);
+        margin-bottom: 0;
+        flex: 1 0 20%;
+      }
+    }
+
+    &--personal::before {
+      background: url('../img/why_us-ico_personals.png') center center no-repeat;
+      background-size: contain;
+      @media (max-width: $md) {
+        background-position: right top;
+        margin-top: 0;
+        margin-left: r(10);
+        order: 1;
+        width: 100%;
+        height: r(150);
+        margin-bottom: 0;
+        flex: 1 0 35%;
+      }
+    }
+  }
+
+  &__card-title {
+    font-weight: 300;
+    font-size: r(20);
+    line-height: r(22);
+    text-transform: uppercase;
+    @media (max-width: $md) {
+      font-size: r(25);
+      line-height: r(28);
+    }
+  }
+
+  &__card-text {
+    font-weight: 400;
+    margin-top: r(10);
+    font-size: r(14);
+    line-height: r(15);
+    @media (max-width: $md) {
+      font-size: r(16);
+      line-height: r(18);
+    }
+  }
+
+}
