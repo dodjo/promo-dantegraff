@@ -1,183 +1,248 @@
-.app-pricing {
-  padding: 54px 0 61px 0;
+.pricing {
+  width: 100%;
+  padding: r(55) 0 r(60) 0;
   background: url('../img/app-pricing-line-bg1.svg') left 200px no-repeat, $white-color;
   background-size: 40%;
 
-  &__cards {
-    margin-top: 55px;
+  @media (max-width: $md) {
+    background-position: left r(120), right 95%;
+    background-size: r(400), r(300);
   }
 
-  &__card {
-    margin: 15px 5px;
-    position: relative;
-    height: 100%;
-    // max-width: 100%;
-    // min-width: 280px;
-
-    text-align: center;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    padding-bottom: 10%;
-
-    h3 {
-      margin-top: 30px;
-      font-weight: 700;
-      font-size: 1.28em;
-      text-transform: uppercase;
-      color: $black-color;
-    }
-
-    &--blue-text {
-      color: #00C2EB;
-    }
-
-    &--green-text {
-      color: #50CD13;
-    }
-
-    &--orange-text {
-      color: #FF9C00;
-    }
-  }
-
-  &__card-icon-free {
-    position: absolute;
-    left: 30px;
-    top: -9px;
-    width: 45/14+em;
-    height: 53/14+em;
-
-
-    &--blue {
-      background: url('../img/card-icon-free-blue.png') center center no-repeat;
-    }
-
-    &--green {
-      background: url('../img/card-icon-free-green.png') center center no-repeat;
-    }
-
-    &--orange {
-      background: url('../img/card-icon-free-orange.png') center center no-repeat;
-    }
-  }
-
-  &__card-head-img {
+  &__top {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    // padding: 5% 0;
-    height: 30%;
-    width: 100%;
-    border-radius: 20px 20px 0px 0px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
-    img {
-      width: 25%;
-    }
+  &__title {
+    flex: 1;
 
-    &--bg-blue {
-      background: url('../img/card-bg-blue.jpg') center center no-repeat;
-      background-size: cover;
-    }
-
-    &--bg-green {
-      background: url('../img/card-bg-green.jpg') center center no-repeat;
-      background-size: cover;
-    }
-
-    &--bg-orange {
-      background: url('../img/card-bg-orange.jpg') center center no-repeat;
-      background-size: cover;
+    @media (max-width: $md) {
+      flex: 1 1 100%;
     }
   }
 
-  &__card-price {
+  &__title-text {
+    padding-top: r(120);
+    padding-left: r(20);
+    flex: 1;
+
+    @media (max-width: $md) {
+      padding-top: r(80);
+      padding-left: r(100);
+    }
+  }
+
+  &__cards {
+    margin-top: r(55);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: $md) {
+      justify-content: center;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    margin-top: 23px;
-    font-weight: 700;
-    font-size: 3.21em;
-    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: r(40);
+    box-shadow: 0px r(4) r(20) rgba(0, 0, 0, 0.15);
+    border-radius: r(20);
+    flex: 0 1 32%;
 
-    span {
-      position: relative;
-      top: -20px;
-      right: 5px;
-      margin-top: 10px;
-      font-weight: 500;
-      font-size: 0.33em;
+    @media (max-width: $md) {
+      flex: 0 1 80%;
+      margin: r(20);
+    }
+
+    @media (max-width: $sd) {
+      flex: 1;
+      margin: r(20);
+    }
+
+    &__icon {
+      position: absolute;
+      left: r(30);
+      top: r(-9);
+      width: r(50);
+      height: r(56);
+
+
+      &--lite {
+        background: url('../img/card-icon-free-blue.png') center center no-repeat;
+        background-size: contain;
+      }
+
+      &--medium {
+        background: url('../img/card-icon-free-green.png') center center no-repeat;
+        background-size: contain;
+      }
+
+      &--gold {
+        background: url('../img/card-icon-free-orange.png') center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &__head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: r(200);
+      border-radius: r(20) r(20) 0 0;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: block;
+        width: r(100);
+        height: r(100);
+        opacity: 0.8;
+        transition: all 0.4s ease;
+      }
+
+      &:hover::before {
+        transform: scale(1.2);
+        opacity: 1;
+        filter: drop-shadow(0 0 r(30) rgba(0, 0, 0, 0.4));
+      }
+
+      &--lite {
+        background: #00C2EB url('../img/card-bg-blue.jpg') center center no-repeat;
+        background-size: cover;
+
+        &::before {
+          background: url('../img/card-tablet.svg') center center no-repeat;
+          background-size: contain;
+        }
+      }
+
+      &--medium {
+        background: #50CD13 url('../img/card-bg-green.jpg') center center no-repeat;
+        background-size: cover;
+
+        &::before {
+          background: url('../img/card-superhero_ironman.svg') center center no-repeat;
+          background-size: contain;
+        }
+      }
+
+      &--gold {
+        background: #FF9C00 url('../img/card-bg-orange.jpg') center center no-repeat;
+        background-size: cover;
+        &::before {
+          background: url('../img/card-download-ebook_icon.svg') center center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+    }
+
+    &__wrap {
+      padding: 0 r(20);
+    }
+
+    &__title {
+      margin-top: r(30);
+      font-weight: bold;
+      font-size: r(18);
+      line-height: r(22);
+      text-align: center;
       text-transform: uppercase;
-    }
-
-
-  }
-
-  &__card-month {
-    font-weight: 700;
-    font-size: 1.14em;
-    text-transform: uppercase;
-  }
-
-  &__card-list {
-    margin-top: 22px;
-
-    li {
       color: $black-color;
-      padding: 9px 0;
-    }
-  }
 
-  &__card-button {
-    display: inline-block;
-    margin-top: 30px;
-    border-radius: 1em;
-    padding: 4% 5%;
-    color: $white-color;
-    font-weight: 700;
-    margin-bottom: 40px;
-
-    &--blue {
-      background: #00C2EB;
-      box-shadow: 0px 4px 7px rgba(0, 194, 235, 0.21);
+      @media (max-width: $md) {
+        font-size: r(19);
+        line-height: r(24);
+      }
     }
 
-    &--green {
-      background: #50CD13;
-      box-shadow: 0px 4px 7px rgba(80, 205, 19, 0.2);
+    &__price {
+      position: relative;
+      margin-top: r(25);
+      font-weight: 700;
+      font-size: r(40);
+      line-height: r(20);
+      text-transform: uppercase;
+
+      span {
+        position: relative;
+        top: r(-17);
+        right: r(5);
+        margin-top: r(10);
+        font-weight: 500;
+        font-size: r(15);
+        line-height: r(18);
+        text-transform: uppercase;
+      }
+
+      &--lite {
+        color: #00C2EB;
+      }
+
+      &--medium {
+        color: #50CD13;
+      }
+
+      &--gold {
+        color: #FF9C00;
+      }
     }
 
-    &--orange {
-      background: #FF9C00;
-      box-shadow: 0px 4px 7px rgba(255, 156, 0, 0.2);
-    }
-  }
+    &__month {
+      font-weight: 700;
+      font-size: r(16);
+      line-height: r(20);
+      text-transform: uppercase;
 
-}
+      &--lite {
+        color: #00C2EB;
+      }
 
-@media (max-width:768px) {
-  .app-pricing {
-    &__card {
-      font-size: 1.4em;
+      &--medium {
+        color: #50CD13;
+      }
+
+      &--gold {
+        color: #FF9C00;
+      }
     }
 
-    &__card-head-img {
-      height: 200px;
+    &__list {
+      margin-top: r(22);
+      color: $black-color;
+      font-size: r(14);
+      line-height: r(28);
     }
-  }
-}
 
-@media (max-width:576px) {
-  .app-pricing {
-    background-position: left 130px;
-    background-size: 65%;
-    &__card {
-      font-size: 1em;
-    }
-  }
-}
+    &__btn {
+      margin-top: r(30);
+      width: auto;
 
-@media (max-width:390px) {
-  .app-pricing {
-    &__card {
-      font-size: 0.75em;
+      &--lite {
+        background: #00C2EB;
+      }
+
+      &--medium {
+        background: #50CD13;
+        box-shadow: 0px 4px 7px rgba(80, 205, 19, 0.2);
+      }
+
+      &--gold {
+        background: #FF9C00;
+        box-shadow: 0px 4px 7px rgba(255, 156, 0, 0.2);
+      }
     }
+
   }
 }

@@ -40,6 +40,10 @@ a {
   @media (max-width: $md) {
     padding: 0 r(50);
   }
+
+  @media (max-width: $sd) {
+    padding: 0 r(20);
+  }
 }
 
 .section-title {
@@ -51,7 +55,7 @@ a {
   text-transform: uppercase;
   color: $black-color;
 
-  &--white {
+  &--light {
     color: $white-color
   }
 
@@ -69,7 +73,11 @@ a {
   line-height: r(24);
   color: $black-color;
 
-  &--white {
+  p{
+    margin: r(20) 0;
+  }
+
+  &--light{
     color: $white-color
   }
 

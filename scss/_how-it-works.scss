@@ -1,93 +1,180 @@
 .how-it-works {
-    background: url('../img/how-it-work-bg.jpg') center center no-repeat;
-    background-size: cover;
-    padding: 5% 0 6% 0;
+  background: url('../img/how-it-work-bg.jpg') center center no-repeat;
+  background-size: cover;
+  padding: 5% 0 6% 0;
 
-    &__cards {
-      width: 100%;
-      margin-top: 48px;
-      background: url('../img/how-it-work-cards-bg.svg') center center no-repeat;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    flex: 1;
+
+    @media (max-width: $md) {
+      flex: 1 1 100%;
     }
+  }
 
-    &__card {
-      position: relative;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 102.82%);
-      border-radius: 20px;
-      color: $white-color;
-      padding: 20px;
-      width: 100%;
-      height: 100%;
+  &__text {
+    padding-top: r(60);
+    padding-left: r(20);
+    flex: 1;
+
+    @media (max-width: $md) {
+      padding-top: r(40);
+      padding-left: r(100);
     }
+  }
 
-    &__arrow-left {
-      position: absolute;
-      content:'';
-      width: 20px;
-      height: 20px;
-      top: 50%;
-      right: -20px;
-      background: url('../img/arrow1-card.svg') center center no-repeat;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-between;
+    margin-top: r(50);
+    // background: url('../img/how-it-work-cards-bg.svg') center center no-repeat;
 
-      &--active {
-        right: -25px;
-        background: url('../img/arrow2-card.svg') center center no-repeat;
+    @media (max-width: $md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 102.82%);
+    border-radius: 20px;
+    color: $white-color;
+    padding: 20px;
+    flex: 0 1 33%;
+    margin: r(10);
+    transition: all 0.3s ease-out;
+
+    &__icon {
+      width: r(80);
+      height: r(80);
+      filter: invert(50%) sepia(98%) saturate(1350%) hue-rotate(151deg) brightness(102%) contrast(101%);
+
+      &--user_check {
+        background: url('../img/user_check_icon.svg') center center no-repeat;
+        background-size: contain;
       }
-    }
 
-    &__arrow-right {
-      position: absolute;
-      content:'';
-      width: 20px;
-      height: 20px;
-      top: 50%;
-      left: -20px;
-      background: url('../img/arrow1-card.svg') center center no-repeat;
-      transform: rotate(180deg);
-    }
-
-    &__arrow-bottom {
-      position: absolute;
-      content:'';
-      width: 20px;
-      height: 20px;
-      left: 50%;
-      bottom: -20px;
-      background: url('../img/arrow1-card.svg') center center no-repeat;
-      transform: rotate(90deg);
-
-      &--active {
-        right: -25px;
-        background: url('../img/arrow2-card.svg') center center no-repeat;
+      &--crosshair_icon {
+        background: url('../img/crosshair_icon.svg') center center no-repeat;
+        background-size: contain;
       }
-    }
 
-    &__card-item {
-      &:nth-child(1) .how-it-works__card{
-        background: linear-gradient(0deg, #00C2EB 0.15%, #008DE0 124.18%);
-        box-shadow: 0px 0px 50px rgba(0, 194, 235, 0.5);
-        border-radius: 20px;
+      &--palette_icon {
+        background: url('../img/palette_icon.svg') center center no-repeat;
+        background-size: contain;
       }
+
+      &--device_mobile_icon {
+        background: url('../img/device_mobile_icon.svg') center center no-repeat;
+        background-size: contain;
+      }
+
+      &--rocket_icon {
+        background: url('../img/rocket_icon.svg') center center no-repeat;
+        background-size: contain;
+      }
+
+      &--pen_icon {
+        background: url('../img/pen_icon.svg') center center no-repeat;
+        background-size: contain;
+      }
+
+      &--coin_icon {
+        background: url('../img/coin_icon.svg') center center no-repeat;
+        background-size: contain;
+      }
+
+      &--users_icon {
+        background: url('../img/users_icon.svg') center center no-repeat;
+        background-size: contain;
+      }
+
+      &--user_check_icon {
+        background: url('../img/user_check_icon.svg') center center no-repeat;
+        background-size: contain;
+      }
+
+      &--mood_happy_icon {
+        background: url('../img/mood_happy_icon.svg') center center no-repeat;
+        background-size: contain;
+      }
+
     }
 
-    &__card-img {
-      width: 30%;
-      height: auto;
-    }
-
-    &__card-title {
-      margin-top: 10%;
+    &__title {
+      margin-top: r(55);
       font-weight: 400;
       font-style: normal;
-      font-size: 1.42em;
-      line-height: 18/14+em;
+      font-size: r(20);
+      line-height: r(24);
       text-transform: uppercase;
     }
 
-    &__card-body {
-      margin-top: 8%;
+    &__body {
+      margin-top: r(20);
       font-weight: 400;
       font-style: normal;
-      font-size: 1em;
-      line-height: 24/14+em;
+      font-size: r(14);
+      line-height: r(17);
+    }
+
+    &.active {
+      background: linear-gradient(0deg, #00C2EB 0.15%, #008DE0 124.18%);
+      box-shadow: 0px 0px 50px rgba(0, 194, 235, 0.5);
+      border-radius: 20px;
+    }
+
+    &.active .card__icon {
+      filter: invert(100%) sepia(0%) saturate(7496%) hue-rotate(325deg) brightness(98%) contrast(105%);
     }
   }
+
+  &__arrow-left {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: -20px;
+    background: url('../img/arrow1-card.svg') center center no-repeat;
+
+    &--active {
+      right: -25px;
+      background: url('../img/arrow2-card.svg') center center no-repeat;
+    }
+  }
+
+  &__arrow-right {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: -20px;
+    background: url('../img/arrow1-card.svg') center center no-repeat;
+    transform: rotate(180deg);
+  }
+
+  &__arrow-bottom {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    bottom: -20px;
+    background: url('../img/arrow1-card.svg') center center no-repeat;
+    transform: rotate(90deg);
+
+    &--active {
+      right: -25px;
+      background: url('../img/arrow2-card.svg') center center no-repeat;
+    }
+  }
+}

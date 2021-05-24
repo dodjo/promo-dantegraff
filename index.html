@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <!-- <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap-grid.min.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
   <link rel="stylesheet" href="css/base.css">
 </head>
 
@@ -81,15 +81,43 @@
     </div>
   </header>
 
-  <!-- <section class="about" id="about">
-    <div class="about__bg1"></div>
-    <div class="about__row-top">
-      <div class="about__description"></div>
-      <div class="about__phone"></div>
+  <section class="about" id="about">
+    <div class="about__row">
+      <div class="about__col-left">
+        <h2 class="section-title section-title--light">Для Кого?</h2>
+        <h3 class="about__sub-title">Сценаристам</h3>
+        <p class="about__text">Разрабатывайте на основе свои сценариев интересные игры!</p>
+        <h3 class="about__sub-title">Художникам</h3>
+        <p class="about__text">Теперь вы можете заработать на своих комиксах!</p>
+        <h3 class="about__sub-title">Тренерам</h3>
+        <p class="about__text">Выделитесь! Сделайте интерактивный курс для подписчиков</p>
+        <h3 class="about__sub-title">Геймдизайнерам, редакторам</h3>
+        <p class="about__text">Соберите команду, и быстро выпускайте игры!</p>
+        <h3 class="about__sub-title">Инвесторам, продюсерам</h3>
+        <p class="about__text">Найдите сюжетные сокровища среди творений миллинов людей</p>
+        <h3 class="about__sub-title">Пользователям</h3>
+        <p class="about__text">Играйте, и получайте удовольствие!</p>
+      </div>
+
+      <div class="about__col-right">
+        <h2 class="section-title section-title--light">Это Бесплатно!</h2>
+        <div class="about__text-block">
+          <p>Вы можете публиковать свои творения
+            совершенно <b>бесплатно!</b></p>
+          <p>А если ваша игра понравится пользователям,
+            вы сможете заработать на этом <b>серьезные деньги!</b></p>
+          <p>Кроме того, вы можете собрать <b>команду</b>
+            из сценаристов, художников, дизайнеров, редакторов
+            или привлечь внимание <b>инвесторов</b>
+            и продюсеров к вашему продукту!</p>
+        </div>
+      </div>
     </div>
-    <a href="#" class="about__button-join">присоедениться!</a>
-    <div class="about__bg2"></div>
-  </section> -->
+
+    <div class="about__row">
+      <a href="#" class="about__button-join">ПРИСОЕДИНИТЬСЯ!</a>
+    </div>
+  </section>
 
   <section class="why-us" id="why-us">
     <div class="container">
@@ -136,213 +164,177 @@
     </div>
   </section>
 
-
-  <!-- <section class="how-it-works" id="how-it-works">
+  <section class="how-it-works" id="how-it-works">
     <div class="container">
-      <div class="head-block row">
-        <div class="col-12 col-sm-6">
-          <h2 class="head-block__title head-block__title--white">Как это работает?</h2>
-        </div>
-        <div class="col-12 col-sm-6">
-          <p class="head-block__body head-block__body--white">
-            Что нужно сделать,
+      <div class="how-it-works__top">
+        <h2 class="how-it-works__title section-title section-title--light">Как это работает?</h2>
+        <div class="how-it-works__text section-text section-text--light ">
+          <p>Что нужно сделать,
             чтобы самореализоваться как творцу,
-            найти свою аудиторию и заработать денег? <br /><br />
-            DanteGraf поможет вам в этом!
-          </p>
-        </div>
-      </div>
-    </div>
+            найти свою аудиторию и заработать денег?</p>
 
-    <div class="how-it-works__cards">
-      <div class="container">
-        <div class="row">
-          <div class="how-it-works__card-item col-12 col-sm-12 col-md-4 mb-4">
-            <div class="how-it-works__card ">
-              <img src="img/how-it-work-user_check_icon.svg" alt class="how-it-works__card-img">
-              <h3 class="how-it-works__card-title">Регистрация</h3>
-              <p class="how-it-works__card-body">Пройти бесплатную регистрацию
-                в веб-сервисе DanteGraff</p>
-              <div class="how-it-works__arrow-left how-it-works__arrow-left--active d-none d-md-block"></div>
-              <div class="how-it-works__arrow-bottom how-it-works__arrow-bottom--active d-block d-md-none"></div>
-            </div>
-          </div>
-
-          <div class="how-it-works__card-item col-12 col-sm-12 col-md-4  mb-4">
-            <div class="how-it-works__card">
-              <img src="img/how-it-work-crosshair_icon.svg" alt class="how-it-works__card-img">
-              <h3 class="how-it-works__card-title">Создать новый проект</h3>
-              <p class="how-it-works__card-body">Это может быть текстовая игра, с картинками, диалогами, музыкой.
-                Интерактивный комикс, где пользователь
-                решает что произойдет дальше, обучающая программа и т.д. Ограничение - только ваша фантазия.
-              </p>
-              <div class="how-it-works__arrow-left d-none d-md-block"></div>
-              <div class="how-it-works__arrow-bottom d-block d-md-none"></div>
-            </div>
-          </div>
-
-          <div class="how-it-works__card-item col-12 col-sm-12 col-md-4  mb-4">
-            <div class="how-it-works__card">
-              <img src="img/how-it-work-palette_icon.svg" alt class="how-it-works__card-img">
-              <h3 class="how-it-works__card-title">Жанры и типы</h3>
-              <p class="how-it-works__card-body">Вы можете создать одну игру или сериал. Линейную книгу или
-                разветвленный сюжет. Это может быть триллер,
-                детектив, детская игра, комикс для взрослых, все что угодно!</p>
-              <div class="how-it-works__arrow-bottom"></div>
-            </div>
-          </div>
-
-          <div class="how-it-works__card-item col-12 col-sm-12 col-md-4  mb-4">
-            <div class="how-it-works__card">
-              <img src="img/how-it-work-device_mobile_icon.svg" alt class="how-it-works__card-img">
-              <h3 class="how-it-works__card-title">Свое приложение</h3>
-              <p class="how-it-works__card-body">Вы так же можете заказать выпуск своего приложения, в котором будет
-                только ваша игра, история или комикс.</p>
-              <div class="how-it-works__arrow-bottom"></div>
-            </div>
-          </div>
-
-
-          <div class="how-it-works__card-item col-12 col-sm-12 col-md-4  mb-4">
-            <div class="how-it-works__card">
-              <img src="img/how-it-work-rocket_icon.svg" alt class="how-it-works__card-img">
-              <h3 class="how-it-works__card-title">Публикация</h3>
-              <p class="how-it-works__card-body">После публикации, ваша игра, книга, комикс появляется в нашем мобильном
-                приложении. Где все истории
-                разделены по жанрам, авторам, рейтингам.</p>
-              <div class="how-it-works__arrow-right d-none d-md-block"></div>
-              <div class="how-it-works__arrow-bottom d-block d-md-none"></div>
-            </div>
-          </div>
-
-          <div class="how-it-works__card-item col-12 col-sm-12 col-md-4  mb-4">
-            <div class="how-it-works__card">
-              <img src="img/how-it-work-pen_icon.svg" alt class="how-it-works__card-img">
-              <h3 class="how-it-works__card-title">Наполнение</h3>
-              <p class="how-it-works__card-body">Создавайте персонажей игры, добавляйте картинки, музыку, диалоги.
-                Варианты выбора для пользователя.
-                Делайте игру интерактивной, увлекательной насколько пожелаете</p>
-              <div class="how-it-works__arrow-right d-none d-md-block"></div>
-              <div class="how-it-works__arrow-bottom d-block d-md-none"></div>
-            </div>
-          </div>
-
-          <div class="hhow-it-works__card-item col-12 col-sm-12 col-md-4  mb-4">
-            <div class="how-it-works__card">
-              <img src="img/how-it-work-coin_icon.svg" alt class="how-it-works__card-img">
-              <h3 class="how-it-works__card-title">Деньги</h3>
-              <p class="how-it-works__card-body">Ваш продукт может быть бесплатным. Можно установить разовую цену за
-                игру,
-                или цену за один сезон сериала,
-                а тизер сделать бесплатным.</p>
-              <div class="how-it-works__arrow-left d-none d-md-block"></div>
-              <div class="how-it-works__arrow-bottom d-block d-md-none"></div>
-            </div>
-          </div>
-
-          <div class="how-it-works__card-item col-12 col-sm-12 col-md-4  mb-4">
-            <div class="how-it-works__card">
-              <img src="img/how-it-work-users_icon.svg" alt class="how-it-works__card-img">
-              <h3 class="how-it-works__card-title">Пользователи</h3>
-              <p class="how-it-works__card-body">Люди качают приложение. Выбирают ваш продукт, оплачивают или играют
-                бесплатно(по вашему выбору), читают,
-                получают удовольствие. Оставляют свой отзыв.</p>
-              <div class="how-it-works__arrow-left d-none d-md-block"></div>
-              <div class="how-it-works__arrow-bottom d-block d-md-none"></div>
-            </div>
-          </div>
-
-          <div class="how-it-works__card-item col-12 col-sm-12 col-md-4  mb-4">
-            <div class="how-it-works__card">
-              <img src="img/how-it-work-mood_happy_icon.svg" alt class="how-it-works__card-img">
-              <h3 class="how-it-works__card-title">Вы богаты!</h3>
-              <p class="how-it-works__card-body">Деньги которые оплатили пользователи, выплачиваются вам (за вычетом
-                банковской и нашей комиссии). Чем
-                лучше ваш продукт и чем больше пользователей, тем вы богаче.</p>
-            </div>
-          </div>
+          <p>DanteGraf поможет вам в этом!</p>
         </div>
       </div>
 
-    </div>
-  </section> -->
 
-  <!-- <section class="app-pricing">
+      <div class="how-it-works__cards">
+        <div class="card">
+          <div class="card__icon card__icon--user_check"></div>
+          <h3 class="card__title">Регистрация</h3>
+          <p class="card__body">Пройти бесплатную регистрацию
+            в веб-сервисе DanteGraff</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--crosshair_icon"></div>
+          <h3 class="card__title">Создать новый проект</h3>
+          <p class="card__body">Это может быть текстовая игра, с картинками, диалогами, музыкой.
+            Интерактивный комикс, где пользователь
+            решает что произойдет дальше, обучающая программа и т.д. Ограничение - только ваша фантазия.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--palette_icon"></div>
+          <h3 class="card__title">Жанры и типы</h3>
+          <p class="card__body">Вы можете создать одну игру или сериал. Линейную книгу или
+            разветвленный сюжет. Это может быть триллер,
+            детектив, детская игра, комикс для взрослых, все что угодно!</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--device_mobile_icon"></div>
+          <h3 class="card__title">Свое приложение</h3>
+          <p class="card__body">Вы так же можете заказать выпуск своего приложения, в котором будет
+            только ваша игра, история или комикс.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--rocket_icon"></div>
+          <h3 class="card__title">Публикация</h3>
+          <p class="card__body">После публикации, ваша игра, книга, комикс появляется в нашем мобильном
+            приложении. Где все истории
+            разделены по жанрам, авторам, рейтингам.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--pen_icon"></div>
+          <h3 class="card__title">Наполнение</h3>
+          <p class="card__body">Создавайте персонажей игры, добавляйте картинки, музыку, диалоги.
+            Варианты выбора для пользователя.
+            Делайте игру интерактивной, увлекательной насколько пожелаете</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--coin_icon"></div>
+          <h3 class="card__title">Деньги</h3>
+          <p class="card__body">Ваш продукт может быть бесплатным. Можно установить разовую цену за
+            игру, или цену за один сезон сериала,
+            а тизер сделать бесплатным.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--users_icon"></div>
+          <h3 class="card__title">Пользователи</h3>
+          <p class="card__body">Люди качают приложение. Выбирают ваш продукт, оплачивают или играют
+            бесплатно(по вашему выбору), читают,
+            получают удовольствие. Оставляют свой отзыв.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon card__icon--mood_happy_icon"></div>
+          <h3 class="card__title">Вы богаты!</h3>
+          <p class="card__body">Деньги которые оплатили пользователи, выплачиваются вам (за вычетом
+            банковской и нашей комиссии). Чем лучше ваш продукт и чем больше пользователей, тем вы богаче.</p>
+        </div>
+
+
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+  <section class="pricing">
     <div class="container">
-      <div class="head-block row">
-        <div class="col-12 col-sm-6">
-          <h2 class="head-block__title">Сколько<br />я заработаю?</h2>
-        </div>
-        <div class="col-12 col-sm-6">
-          <p class="head-block__body">Это зависит от того, скольким людям понравится ваше творчество. <br /><br />
-            У нас большая аудитория, вы сможете найти среди нее своих читателей! <br /><br />
-            Ниже указаны примеры расчета, сколько успешный автор в среднем зарабатывает
+      <div class="pricing__top">
+        <h2 class="pricing__title section-title">Сколько<br />я заработаю?</h2>
+        <div class="pricing__title-text section-text">
+          <p>Это зависит от того, скольким людям понравится ваше творчество. </p>
+          <p>У нас большая аудитория, вы сможете найти среди нее своих читателей! </p>
+          <p>Ниже указаны примеры расчета, сколько успешный автор в среднем зарабатывает
             на нашей платформе.</p>
         </div>
       </div>
+      <div class="pricing__cards">
+        <div class="card">
+          <div class="card__icon card__icon--lite"></div>
+          <div class="card__head card__head--lite"></div>
+          <div class="card__body">
+            <div class="card__wrap">
+              <h3 class="card__title">Текстовая игра</h3>
+              <div class="card__price card__price--lite"><span>от</span>65 000₽</div>
+              <div class="card__month card__month--lite">в месяц</div>
+              <ul class="card__list">
+                <li>Одноразовая игра</li>
+                <li>1 пользователь — 75 руб</li>
+                <li>От 30 000 пользователей</li>
+                <li>Растущая аудитория</li>
+                <li>Прибыль: продолжает расти</li>
+              </ul>
+            </div>
+            <div class="card__wrap">
+              <a href="#" class="card__btn card__btn--lite form-button">Стать частью команды!</a>
+            </div>
+          </div>
+        </div>
 
-      <div class="row mt-5 cards-slider">
-        <div class="col-12 col-sm-4">
-          <div class="app-pricing__card">
-            <div class="app-pricing__card-icon-free app-pricing__card-icon-free--blue"></div>
-            <div class="app-pricing__card-head-img app-pricing__card-head-img--bg-blue">
-              <img src="img/card-tablet.svg" alt>
+        <div class="card">
+          <div class="card__icon card__icon--medium"></div>
+          <div class="card__head card__head--medium"></div>
+          <div class="card__body">
+            <div class="card__wrap">
+              <h3 class="card__title">Серия комиксов</h3>
+              <div class="card__price card__price--medium"><span>от</span>75 000₽</div>
+              <div class="card__month card__month--medium">в месяц</div>
+              <ul class="card__list">
+                <li>Серия комиксов</li>
+                <li>1 серия бесплатная</li>
+                <li>Последующие серии — 50 руб.</li>
+                <li>Автор: выпускает по 1 серии в месяц</li>
+                <li>Прибыль: продолжает расти</li>
+              </ul>
             </div>
-            <h3>Текстовая игра</h3>
-            <div class="app-pricing__card-price app-pricing__card--blue-text"><span>от</span>65 000₽</div>
-            <div class="app-pricing__card-month app-pricing__card--blue-text">в месяц</div>
-            <ul class="app-pricing__card-list">
-              <li>Одноразовая игра</li>
-              <li>1 пользователь — 75 руб</li>
-              <li>От 30 000 пользователей</li>
-              <li>Растущая аудитория</li>
-              <li>Прибыль: продолжает расти</li>
-            </ul>
-            <a href="#" class="app-pricing__card-button  app-pricing__card-button--blue">Стать частью команды!</a>
+            <div class="card__wrap">
+              <a href="#" class="card__btn card__btn--medium form-button">Принять участие!</a>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-sm-4">
-          <div class="app-pricing__card">
-            <div class="app-pricing__card-icon-free app-pricing__card-icon-free--green"></div>
-            <div class="app-pricing__card-head-img app-pricing__card-head-img--bg-green">
-              <img src="img/card-superhero_ironman.svg" alt>
+
+        <div class="card">
+          <div class="card__icon card__icon--gold"></div>
+          <div class="card__head card__head--gold"></div>
+          <div class="card__body">
+            <div class="card__wrap">
+              <h3 class="card__title">Интерактивная книга</h3>
+              <div class="card__price card__price--gold"><span>от</span>85 000₽</div>
+              <div class="card__month card__month--gold">в месяц</div>
+              <ul class="card__list">
+                <li>Линейная книга</li>
+                <li>1 пользователь — 75 руб.</li>
+                <li>От 1 000 пользователей</li>
+                <li>Прибыль: продолжает расти</li>
+                <li>Автор: выпускает свое приложение</li>
+              </ul>
             </div>
-            <h3>Серия комиксов</h3>
-            <div class="app-pricing__card-price app-pricing__card--green-text"><span>от</span>75 000₽</div>
-            <div class="app-pricing__card-month app-pricing__card--green-text">в месяц</div>
-            <ul class="app-pricing__card-list">
-              <li>Серия комиксов</li>
-              <li>1 серия бесплатная</li>
-              <li>Последующие серии — 50 руб.</li>
-              <li>Автор: выпускает по 1 серии в месяц</li>
-              <li>Прибыль: продолжает расти</li>
-            </ul>
-            <a href="#" class="app-pricing__card-button app-pricing__card-button--green">Принять участие!</a>
-          </div>
-        </div>
-        <div class="col-12 col-sm-4">
-          <div class="app-pricing__card">
-            <div class="app-pricing__card-icon-free app-pricing__card-icon-free--orange"></div>
-            <div class="app-pricing__card-head-img app-pricing__card-head-img--bg-orange">
-              <img src="img/card-download-ebook_icon.svg" alt>
+            <div class="card__wrap">
+              <a href="#" class="card__btn card__btn--gold form-button">Стать частью команды!</a>
             </div>
-            <h3>Интерактивная книга</h3>
-            <div class="app-pricing__card-price app-pricing__card--orange-text"><span>от</span>85 000₽</div>
-            <div class="app-pricing__card-month app-pricing__card--orange-text">в месяц</div>
-            <ul class="app-pricing__card-list">
-              <li>Линейная книга</li>
-              <li>1 пользователь — 75 руб.</li>
-              <li>От 1 000 пользователей</li>
-              <li>Прибыль: продолжает расти</li>
-              <li>Автор: выпускает свое приложение</li>
-            </ul>
-            <a href="#" class="app-pricing__card-button app-pricing__card-button--orange">Приступить к написанию!</a>
           </div>
         </div>
       </div>
-
     </div>
-</section> -->
+  </section>
 
   <section class="participate">
     <div class="container">
@@ -358,8 +350,50 @@
     </div>
   </section>
 
-  <!-- <section class="faq" id="faq">
+  <section class="faq" id="faq">
     <div class="container">
+      <h2 class="faq__title">Часто задаваемые вопросы</h2>
+      <div class="faq__accordion accordion">
+        <div class="accordion__title">Не приходит письмо с активацией аккаунта. Почему и что делать?</div>
+        <div class="accordion__body">
+          <p>
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+          </p>
+        </div>
+        <div class="accordion__title">Не приходит письмо с активацией аккаунта. Почему и что делать?</div>
+        <div class="accordion__body">
+          <p>
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+          </p>
+        </div>
+        <div class="accordion__title">Не приходит письмо с активацией аккаунта. Почему и что делать?</div>
+        <div class="accordion__body">
+          <p>
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+          </p>
+        </div>
+        <div class="accordion__title">Не приходит письмо с активацией аккаунта. Почему и что делать?</div>
+        <div class="accordion__body">
+          <p>
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
       <h2>Часто задаваемые вопросы</h2>
       <div class="faq__accordion">
         <div id="accordion">
@@ -401,8 +435,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </section> -->
+    </div> -->
+  </section>
 
   <section class="contact_us">
     <div class="contact_wrap">
@@ -421,8 +455,8 @@
               required="required">
           </div>
           <div class="form__col">
-            <textarea class="form__control form-text-input"  rows="5" name="body" id="description" placeholder="Текст сообщения"
-              required="required"></textarea>
+            <textarea class="form__control form-text-input" rows="5" name="body" id="description"
+              placeholder="Текст сообщения" required="required"></textarea>
           </div>
         </div>
         <input class="form__btn form-button" type="submit" value="Отправить сообщение" name="submit" id="submitButton"
@@ -468,15 +502,15 @@
         <span class="modal__close"></span>
         <h2 class="modal__title">Авторизация</h2>
         <form action="/" method="post" class="modal__form">
-          <input class="modal__form-control form-text-input" type="text" name="name"  id="modal-first-name"
+          <input class="modal__form-control form-text-input" type="text" name="name" id="modal-first-name"
             placeholder="Ваше имя" required="required">
-          <input class=" modal__form-control form-text-input" type="email" name="email"  id="modal-email"
+          <input class=" modal__form-control form-text-input" type="email" name="email" id="modal-email"
             placeholder="Ваш email" required="required">
           <div class="modal__links">
             <a href="#">Забыли пароль?</a>
             <a href="#">Зарегистрироваться</a>
           </div>
-          <input class="modal__btn form-button" type="submit" value="Войти" name="submit" id="modal-submitButton" >
+          <input class="modal__btn form-button" type="submit" value="Войти" name="submit" id="modal-submitButton">
         </form>
 
         <div class="modal__other">
@@ -496,9 +530,9 @@
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
   <script src="js/promo.js"></script>
 
 </body>

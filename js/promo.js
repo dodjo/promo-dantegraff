@@ -31,48 +31,66 @@ window.onload = function () {
 
   }
 
-
-  $("#accordion").accordion({
-    animate: 100,
-    active: false,
-    collapsible: true
+  //Аккордион
+  document.querySelectorAll(".accordion__title").forEach((el) => {
+    el.addEventListener('click', function () {
+      this.classList.toggle("active");
+      const body = this.nextElementSibling;
+      if (body.style.display === "block") {
+        body.style.display = "none";
+      } else {
+        body.style.display = "block";
+      }
+    })
   });
 
-  let sliderIsLive = false;
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth >= 768) {
-      if (sliderIsLive) {
-        $('.cards-slider').slick('unslick');
-        console.log("ok");
-        sliderIsLive = false;
-      }
-    } else {
-      if (!sliderIsLive) {
-
-        $('.cards-slider').slick({
-          arrows: false,
-          infinite: false,
-          centerMode: true,
-          responsive: [{
-              breakpoint: 576,
-              settings: {
-                centerPadding: '50px',
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                centerPadding: '30px',
-              }
-            }
-          ]
-        });
-
-        $('.cards-slider').slick('slickGoTo', 1);
-        sliderIsLive = true;
-      }
-    }
+  //Подсветка карточек в блоке "Что это такое"
+  const card = document.querySelectorAll('.card')
+  card.forEach((el) => {
+    el.addEventListener('mouseenter', function () {
+      el.classList.add('active');
+    });
+    el.addEventListener('mouseleave', function () {
+      el.classList.remove('active');
+    })
   });
+
+
+  // let sliderIsLive = false;
+
+  // window.addEventListener("resize", function () {
+  //   if (window.innerWidth >= 768) {
+  //     if (sliderIsLive) {
+  //       $('.cards-slider').slick('unslick');
+  //       console.log("ok");
+  //       sliderIsLive = false;
+  //     }
+  //   } else {
+  //     if (!sliderIsLive) {
+
+  //       $('.cards-slider').slick({
+  //         arrows: false,
+  //         infinite: false,
+  //         centerMode: true,
+  //         responsive: [{
+  //             breakpoint: 576,
+  //             settings: {
+  //               centerPadding: '50px',
+  //             }
+  //           },
+  //           {
+  //             breakpoint: 480,
+  //             settings: {
+  //               centerPadding: '30px',
+  //             }
+  //           }
+  //         ]
+  //       });
+
+  //       $('.cards-slider').slick('slickGoTo', 1);
+  //       sliderIsLive = true;
+  //     }
+  //   }
+  // });
 
 };
