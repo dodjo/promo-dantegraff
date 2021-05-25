@@ -55,7 +55,7 @@ window.onload = function () {
     })
   });
 
-  //Подсветка карточек в блоке "Что это такое"
+  //Подсветка карточек в блоке "КАК ЭТО РАБОТАЕТ?"
   const card = document.querySelectorAll('.card')
   card.forEach((el) => {
     el.addEventListener('mouseenter', function () {
@@ -65,43 +65,5 @@ window.onload = function () {
       el.classList.remove('active');
     })
   });
-
-
-  // let sliderIsLive = false;
-
-  // window.addEventListener("resize", function () {
-  //   if (window.innerWidth >= 768) {
-  //     if (sliderIsLive) {
-  //       $('.cards-slider').slick('unslick');
-  //       console.log("ok");
-  //       sliderIsLive = false;
-  //     }
-  //   } else {
-  //     if (!sliderIsLive) {
-
-  //       $('.cards-slider').slick({
-  //         arrows: false,
-  //         infinite: false,
-  //         centerMode: true,
-  //         responsive: [{
-  //             breakpoint: 576,
-  //             settings: {
-  //               centerPadding: '50px',
-  //             }
-  //           },
-  //           {
-  //             breakpoint: 480,
-  //             settings: {
-  //               centerPadding: '30px',
-  //             }
-  //           }
-  //         ]
-  //       });
-
-  //       $('.cards-slider').slick('slickGoTo', 1);
-  //       sliderIsLive = true;
-  //     }
-  //   }
-  // });
 
 };
