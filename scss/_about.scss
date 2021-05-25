@@ -91,7 +91,7 @@
     @media (max-width: $md) {
       margin-left: r(-20);
       margin-top: r(40);
-      padding-left: 210px;
+      padding-left: 245px;
       flex: 1 1 100%;
       border-right: none;
       padding-right: 0;
@@ -100,6 +100,7 @@
     }
 
     @media (max-width: $sd) {
+      padding-left: 210px;
       background: url("../img/about-phone-small.png") -30px 0px no-repeat;
       background-size: contain;
     }
@@ -191,6 +192,11 @@
       top: r(22);
       font-size: r(20);
       padding: r(14) r(60);
+    }
+
+    @media (max-width: $md) {
+      font-size: r(16);
+      padding: r(14) r(30);
     }
   }
 }

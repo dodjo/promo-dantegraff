@@ -3,7 +3,6 @@ window.onload = function () {
   const burgerButton = document.querySelector(".burger");
   const burgerСontent = document.querySelector(".burger-menu");
   const burgerLinks = document.querySelector(".burger-menu__links").querySelectorAll('a');
-  const btnEnter = document.querySelectorAll(".nav-button--enter");
 
   function BurgerToggle() {
     burgerButton.classList.toggle("active");
@@ -19,17 +18,29 @@ window.onload = function () {
   }
 
   //Скрыть окно авторизации
-  document.querySelector(".modal__close").addEventListener('click', function () {
-    document.querySelector(".modal").style.display = 'none';
-  });
+  document.querySelectorAll(".modal__close").forEach((el) => {
+    el.addEventListener('click', function () {
+      document.querySelectorAll(".modal").forEach((el)=>{
+        el.style.display = 'none';
+      })
+
+    });
+  })
 
   //Показать окно авторизации
-  for (let i = 0; i < btnEnter.length; i++) {
-    btnEnter[i].addEventListener('click', function () {
-      document.querySelector(".modal").style.display = 'block';
+  document.querySelectorAll(".nav-button--enter").forEach((el) => {
+    el.addEventListener('click', function () {
+      document.querySelector("#modal-enter").style.display = 'block';
     });
+  })
 
-  }
+  //Показать окно регистрации
+  document.querySelectorAll(".nav-button--reg").forEach((el) => {
+    el.addEventListener('click', function () {
+      document.querySelector("#modal-reg").style.display = 'block';
+    });
+  })
+
 
   //Аккордион
   document.querySelectorAll(".accordion__title").forEach((el) => {

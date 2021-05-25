@@ -27,7 +27,7 @@
       </div>
       <div class="header__buttons">
         <a class="header__button nav-button nav-button--enter" href="#">Войти</a>
-        <a class="header__button nav-button" href="#">Регистрация</a>
+        <a class="header__button nav-button nav-button--reg" href="#">Регистрация</a>
         <!-- <div class="select-lang">
           <img src="img/rurussiaflag.svg" alt>
           <ul>
@@ -52,7 +52,7 @@
         </div>
         <div class="burger-menu__buttons">
           <a class="burger-menu__btn-enter nav-button nav-button--enter" href="#">Войти</a>
-          <a class="burger-menu__btn-reg nav-button" href="#">Регистрация</a>
+          <a class="burger-menu__btn-reg nav-button nav-button--reg" href="#">Регистрация</a>
           <div class="select-lang">
             <img src="img/flag-ru.svg" alt>
             <ul>
@@ -481,21 +481,21 @@
     </div>
   </footer>
 
-  <div class="modal">
+  <div class="modal" id="modal-enter">
     <div class="container">
       <div class="modal__box">
         <span class="modal__close"></span>
         <h2 class="modal__title">Авторизация</h2>
         <form action="/" method="post" class="modal__form">
-          <input class="modal__form-control form-text-input" type="text" name="name" id="modal-first-name"
+          <input class="modal__form-control form-text-input" type="text" name="name" id=enter-first-name"
             placeholder="Ваше имя" required="required">
-          <input class=" modal__form-control form-text-input" type="email" name="email" id="modal-email"
+          <input class=" modal__form-control form-text-input" type="email" name="email" id="enter-email"
             placeholder="Ваш email" required="required">
           <div class="modal__links">
             <a href="#">Забыли пароль?</a>
             <a href="#">Зарегистрироваться</a>
           </div>
-          <input class="modal__btn form-button" type="submit" value="Войти" name="submit" id="modal-submitButton">
+          <input class="modal__btn form-button" type="submit" value="Войти" name="enter-submitButton" id="enter-submitButton">
         </form>
 
         <div class="modal__other">
@@ -513,6 +513,42 @@
       </div>
     </div>
   </div>
+
+  <div class="modal" id="modal-reg">
+    <div class="container">
+      <div class="modal__box">
+        <span class="modal__close"></span>
+        <h2 class="modal__title">Зарегистрироваться</h2>
+        <form action="/" method="post" class="modal__form">
+          <input class="modal__form-control form-text-input" type="text" name="reg-first-name" id="reg-first-name"
+            placeholder="Ваше имя" required="required">
+          <input class=" modal__form-control form-text-input" type="email" name="reg-email" id="reg-email"
+            placeholder="Ваш email" required="required">
+          <input class="modal__form-control form-text-input" type="password" name="reg-password" id="reg-password"
+            placeholder="Пароль" required="required">
+          <!-- <div class="modal__links">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Зарегистрироваться</a>
+          </div> -->
+          <input class="modal__btn form-button" type="submit" value="Регистрация" name="reg-submitButton" id="reg-submitButton">
+        </form>
+
+        <div class="modal__other">
+          <span>зарегистрироваться с помощью</span>
+        </div>
+
+        <div class="social">
+          <div class="social__wrap">
+            <a class="social__link" href="#"><img class="social__img" src="img/icon-color-facebook.svg" alt></a>
+            <a class="social__link" href="#"><img class="social__img" src="img/icon-color-google.svg" alt></a>
+            <a class="social__link" href="#"><img class="social__img" src="img/icon-color-twitter.svg" alt></a>
+            <a class="social__link" href="#"><img class="social__img" src="img/icon-color-vk.svg" alt></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
