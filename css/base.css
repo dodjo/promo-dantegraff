@@ -203,6 +203,11 @@ table {
   width: 23.71429rem;
 }
 
+.social__link {
+  pointer-events: none;
+  filter: grayscale(1);
+}
+
 .social__img {
   max-width: 2.28571rem;
   opacity: 1;
@@ -290,7 +295,7 @@ table {
 }
 
 .header__wrap {
-  max-width: 1280px;
+  max-width: 2000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -454,19 +459,69 @@ table {
 
 .about {
   width: 100%;
-  padding-top: 55.71429rem;
+  position: relative;
   margin-bottom: 5.71429rem;
   background: #000 url("../img/about-bg2.jpg") left bottom repeat-x;
 }
 
-.about__description {
+@media (max-width: 768px) {
+  .about {
+    margin-bottom: 2.85714rem;
+  }
+}
+
+.about__head {
+  position: relative;
+  width: 100%;
+  height: 60vw;
+  overflow: hidden;
+  background: #00BBE3 url("../img/about-bg1.jpg") center center no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+}
+
+.about__video {
   position: absolute;
-  top: 35px;
-  right: 35vw;
-  width: 50vw;
-  height: 502px;
-  background: url("../img/about-description.png") no-repeat center center;
+  left: 50%;
+  top: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  height: 200vh;
+  width: 200vw;
+  overflow: hidden;
+}
+
+.about__intro-text {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  width: 65%;
+  height: 70%;
+  background: url("../img/about-intro-text.svg") center center no-repeat;
   background-size: contain;
+}
+
+@media (max-width: 768px) {
+  .about__intro-text {
+    width: 90%;
+  }
+}
+
+.about__intro-phone {
+  position: absolute;
+  top: 29px;
+  right: 0;
+  width: 64%;
+  height: 70vw;
+  background: url("../img/about-phone.png") center top no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .about__intro-phone {
+    display: none;
+  }
 }
 
 .about__row {
@@ -481,7 +536,8 @@ table {
 
 @media (max-width: 768px) {
   .about__row {
-    padding: 0 3.57143rem;
+    padding: 0 1.42857rem;
+    margin-bottom: 0;
   }
 }
 
@@ -492,16 +548,44 @@ table {
 }
 
 .about__col-left {
+  position: relative;
   flex: 0 1 45%;
   padding-right: 1.42857rem;
   padding-bottom: 2.14286rem;
   border-right: 2px dashed rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 768px) {
+  .about__col-left {
+    margin-left: -1.42857rem;
+    margin-top: 2.85714rem;
+    padding-left: 210px;
+    flex: 1 1 100%;
+    border-right: none;
+    padding-right: 0;
+    background: url("../img/about-phone-small.png") 0px 0px no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__col-left {
+    background: url("../img/about-phone-small.png") -30px 0px no-repeat;
+    background-size: contain;
+  }
+}
+
 .about__col-right {
   padding-left: 1.42857rem;
   padding-bottom: 2.14286rem;
   flex: 0 1 45%;
+}
+
+@media (max-width: 768px) {
+  .about__col-right {
+    margin-top: 1.42857rem;
+    flex: 1 1 100%;
+  }
 }
 
 .about__sub-title {
@@ -514,11 +598,26 @@ table {
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 768px) {
+  .about__sub-title {
+    font-size: 0.71429rem;
+    line-height: 0.85714rem;
+    margin-top: 0.71429rem;
+  }
+}
+
 .about__text {
   font-size: 1rem;
   line-height: 1.14286rem;
   color: #FFF;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .about__text {
+    font-size: 0.71429rem;
+    line-height: 0.85714rem;
+  }
 }
 
 .about__text-block {
@@ -537,14 +636,15 @@ table {
   color: #00BBE3;
 }
 
-.about__phone {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  width: 882px;
-  height: 786px;
-  background: url("../img/about-phone.png") no-repeat top right;
-  background-size: contain;
+@media (max-width: 768px) {
+  .about__text-block {
+    margin-top: 1.07143rem;
+    font-size: 0.71429rem;
+    line-height: 0.85714rem;
+  }
+  .about__text-block p {
+    margin: 0.35714rem 0;
+  }
 }
 
 .about__button-join {
@@ -623,7 +723,7 @@ table {
 
 @media (max-width: 768px) {
   .why-us__cards {
-    margin-top: 4.64286rem;
+    margin-top: 1.42857rem;
     flex-direction: column;
   }
 }
@@ -777,6 +877,7 @@ table {
 @media (max-width: 768px) {
   .how-it-works__cards {
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 1.42857rem;
   }
 }
 
@@ -1292,56 +1393,17 @@ table {
   margin-top: 2.85714rem;
 }
 
-.faq .ui-accordion {
-  margin-top: 40px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  padding: 9px 0 9px 50px;
-}
-
-.faq .ui-accordion .ui-accordion-header {
-  display: flex;
-  align-items: center;
-  background-color: #FFF;
-  font-weight: 500;
-  font-size: 1em;
-  padding: 17px 60px 17px 0;
-  color: #000;
-  border: none;
-  background: url("../img/accordion-border-header.svg") right bottom no-repeat;
-}
-
-.faq .ui-accordion .ui-accordion-header .ui-icon {
-  position: absolute;
-  background: url(../img/accordion-icon-2.svg) center center no-repeat;
-  right: 30px;
-  transition: all 0.5s ease;
-  transform: rotate(-90deg);
-}
-
-.faq .ui-accordion .ui-accordion-header-active {
-  background: #FFF;
-}
-
-.faq .ui-accordion .ui-accordion-header-active .ui-icon {
-  background: url(../img/accordion-icon-1.svg) center center no-repeat;
-  transform: rotate(0deg);
-}
-
-.faq .ui-accordion .ui-accordion-content {
-  border: none;
-  background: linear-gradient(180deg, #EFF5FF -36.11%, rgba(239, 239, 239, 0) 235.83%);
-  border-radius: 10px;
-  margin: 0 30px 0 0;
-  height: auto !important;
-}
-
 .accordion {
   background: #FFF;
   box-shadow: 0px 0.28571rem 1.42857rem rgba(0, 0, 0, 0.15);
   border-radius: 1.42857rem;
   padding: 0.71429rem 0 0.71429rem 3.57143rem;
+}
+
+@media (max-width: 480px) {
+  .accordion {
+    padding: 0.71429rem 0 0.71429rem 1.42857rem;
+  }
 }
 
 .accordion__title {
@@ -1352,6 +1414,7 @@ table {
   padding: 1.42857rem 2.85714rem 1.42857rem 0;
   background: url("../img/accordion-border-header.svg") right bottom no-repeat;
   background-size: 100%;
+  cursor: pointer;
 }
 
 .accordion__title::after {
@@ -1359,12 +1422,16 @@ table {
   right: 2.14286rem;
   top: 40%;
   content: '';
-  width: 1.14286rem;
-  height: 0.71429rem;
-  background: url(../img/accordion-icon-2.svg) center center no-repeat;
-  background-size: contain;
-  transform: rotate(-90deg);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid #DADADA;
   transition: all 0.2s ease-out;
+}
+
+@media (max-width: 768px) {
+  .accordion__title::after {
+    right: 1.78571rem;
+  }
 }
 
 .accordion .active {
@@ -1372,9 +1439,8 @@ table {
 }
 
 .accordion .active::after {
-  background: url(../img/accordion-icon-1.svg) center center no-repeat;
-  background-size: contain;
-  transform: rotate(0deg);
+  border-left: 10px solid #00BBE3;
+  transform: rotate(90deg);
 }
 
 .accordion__body {

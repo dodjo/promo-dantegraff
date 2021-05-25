@@ -77,6 +77,11 @@ $sd : 480px;
     width: r(332);
   }
 
+  &__link {
+    pointer-events: none;
+    filter: grayscale(1);
+  }
+
   &__img {
     max-width: r(32);
     opacity: 1;

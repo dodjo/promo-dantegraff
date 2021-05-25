@@ -38,6 +38,7 @@
 
     @media (max-width: $md) {
       grid-template-columns: repeat(1, 1fr);
+      margin-top: r(20);
     }
   }
 
