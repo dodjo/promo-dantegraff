@@ -172,6 +172,16 @@
       padding: r(20) 0;
       margin-right:  r(20);
     }
+
+    & .select-lang__img {
+      width: r(20);
+    }
+
+    & .select-lang__link {
+      font-size: r(20);
+      padding: r(10) r(20) r(10) r(45);
+      background-size: r(20);
+    }
   }
 
 }

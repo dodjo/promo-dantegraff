@@ -69,7 +69,7 @@
     }
 
     &:nth-child(3)::after,
-    &:nth-child(4)::after{
+    &:nth-child(4)::after {
       right: 50%;
       bottom: r(-15);
       transform: rotate(90deg);
@@ -82,7 +82,7 @@
       transform: rotate(180deg);
     }
 
-    &:nth-child(9)::after{
+    &:nth-child(9)::after {
       display: none;
     }
 
@@ -176,6 +176,15 @@
 
     &.active .card__icon {
       filter: invert(100%) sepia(0%) saturate(7496%) hue-rotate(325deg) brightness(98%) contrast(105%);
+    }
+
+    @media (max-width: $md) {
+      &:nth-child(n)::after {
+        left: auto;
+        right: 50%;
+        bottom: r(-17);
+        transform: rotate(90deg);
+      }
     }
   }
 
