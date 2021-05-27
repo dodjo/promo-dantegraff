@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function(event) {
 
   const burgerButton = document.querySelector(".burger");
   const burgerСontent = document.querySelector(".burger-menu");
@@ -20,7 +20,7 @@ window.onload = function () {
   //Скрыть окно авторизации
   document.querySelectorAll(".modal__close").forEach((el) => {
     el.addEventListener('click', function () {
-      document.querySelectorAll(".modal").forEach((el)=>{
+      document.querySelectorAll(".modal").forEach((el) => {
         el.style.display = 'none';
       })
 
@@ -66,4 +66,4 @@ window.onload = function () {
     })
   });
 
-};
+});

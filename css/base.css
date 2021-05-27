@@ -161,9 +161,10 @@ table {
   border: none;
   cursor: pointer;
   width: 100%;
+  white-space: nowrap .form-button;
 }
 
-.form-button:hover {
+.form-button :hover {
   opacity: 0.6;
 }
 
