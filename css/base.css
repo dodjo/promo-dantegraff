@@ -786,7 +786,7 @@ table {
 }
 
 .why-us__card--web::before {
-  background: url("../img/why_us-ico_web.png") center center no-repeat;
+  background: url("../img/why_us-ico_web.svg") center center no-repeat;
   background-size: contain;
   margin-top: 9.28571rem;
 }
@@ -804,7 +804,7 @@ table {
 }
 
 .why-us__card--mobil::before {
-  background: url("../img/why_us-ico_mobil.png") center center no-repeat;
+  background: url("../img/why_us-ico_mobil.svg") center center no-repeat;
   background-size: contain;
   margin-top: 4.28571rem;
 }
@@ -822,7 +822,7 @@ table {
 }
 
 .why-us__card--personal::before {
-  background: url("../img/why_us-ico_personals.png") center center no-repeat;
+  background: url("../img/why_us-ico_personals.svg") center center no-repeat;
   background-size: contain;
 }
 

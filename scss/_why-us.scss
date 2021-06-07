@@ -63,7 +63,7 @@
     }
 
     &--web::before {
-      background: url('../img/why_us-ico_web.png') center center no-repeat;
+      background: url('../img/why_us-ico_web.svg') center center no-repeat;
       background-size: contain;
       margin-top: r(130);
       @media (max-width: $md) {
@@ -78,7 +78,7 @@
     }
 
     &--mobil::before {
-      background: url('../img/why_us-ico_mobil.png') center center no-repeat;
+      background: url('../img/why_us-ico_mobil.svg') center center no-repeat;
       background-size: contain;
       margin-top: r(60);
       @media (max-width: $md) {
@@ -93,7 +93,7 @@
     }
 
     &--personal::before {
-      background: url('../img/why_us-ico_personals.png') center center no-repeat;
+      background: url('../img/why_us-ico_personals.svg') center center no-repeat;
       background-size: contain;
       @media (max-width: $md) {
         background-position: right top;
